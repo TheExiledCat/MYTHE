@@ -34,8 +34,11 @@ public class LaserColliders : MonoBehaviour
             {
                 hitboxes[i] = Physics.OverlapCapsule(lp.points[i].position, lp.points[i + 1].position, radius, playerLayer);
             }
-            if(hitboxes[i].Length>0)
-            print(hitboxes[i][0]);
+            if (hitboxes[i].Length > 0)
+            {
+                hitboxes[i][0].GetComponent<Damage>().Hurt();
+            }
+            
         }
         
     }
