@@ -17,13 +17,10 @@ public class StationaryTrap : Trap
             DamageCollider(col[0]);
         }
 
-
-
-
-
-
-
-
-
+    }
+    void OnDrawGizmos()
+    {
+        Vector3 offset = transform.position;
+        Gizmos.DrawWireCube(center+offset, extents);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
+   
    protected void DamageCollider(Collider col)
     {
         if (col.GetComponent<Damage>() != null)
@@ -11,4 +12,6 @@ public class Trap : MonoBehaviour
             col.GetComponent<Damage>().Hurt();
         }
     }
+   
+    
 }
