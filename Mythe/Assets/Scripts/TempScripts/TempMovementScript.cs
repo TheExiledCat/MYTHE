@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TempMovementScript : MonoBehaviour
 {
-    public float speed = 5f;
-    public float rotationSpeed = 100f;
+    public float speed ;
+    public float rotationSpeed ;
 
     // Update is called once per frame
     void Update()

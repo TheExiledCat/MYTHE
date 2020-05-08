@@ -595,7 +595,7 @@ MonoBehaviour:
   smoothFactor: 0.125
   lookAtPlayer: 0
   rotateAround: 1
-  rotationSpeed: 10
+  rotationSpeed: 5
 --- !u!1 &1134425285
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  rotationSpeed: 100
+  rotationSpeed: 50
 --- !u!1 &1760009563
 GameObject:
   m_ObjectHideFlags: 0
