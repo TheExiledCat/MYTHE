@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     public float playerSpeed;
     public float jumpForce;
 
-    public Rigidbody snakehead;
+    Rigidbody snakehead;
 
     Vector3 x, z;
 
