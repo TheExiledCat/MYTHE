@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ResourceTest.unity
+- path: Assets/Scenes/DamageTest.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
