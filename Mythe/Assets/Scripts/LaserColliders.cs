@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserColliders : MonoBehaviour
+public class LaserColliders : Trap
 {
     LaserPositioner lp;
     [SerializeField]
     List<Collider[]> hitboxes = new List<Collider[]>();
-    [SerializeField]
-    LayerMask playerLayer;
+    
     [SerializeField]
     float radius;
     void Start()
@@ -18,7 +17,7 @@ public class LaserColliders : MonoBehaviour
         {
             hitboxes.Add(new Collider[1]);
         }
-       
+        
     }
 
     // Update is called once per frame
@@ -28,16 +27,17 @@ public class LaserColliders : MonoBehaviour
         {
             if (i == hitboxes.Count - 1)
             {
-                hitboxes[i] = Physics.OverlapCapsule(lp.points[i].position, lp.points[0].position, radius, playerLayer);
+                hitboxes[i] = Physics.OverlapCapsule(lp.points[i].position, lp.points[0].position, radius, Constants.PLAYER_LAYER);
             }
             else
             {
-                hitboxes[i] = Physics.OverlapCapsule(lp.points[i].position, lp.points[i + 1].position, radius, playerLayer);
+                hitboxes[i] = Physics.OverlapCapsule(lp.points[i].position, lp.points[i + 1].position, radius, Constants.PLAYER_LAYER);
             }
-            if(hitboxes[i].Length>0)
-            print(hitboxes[i][0]);
+            if (hitboxes[i].Length > 0)
+                DamageCollider(hitboxes[i][0]);
         }
-        
+
+       
     }
     
 }

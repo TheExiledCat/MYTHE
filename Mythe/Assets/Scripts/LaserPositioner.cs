@@ -36,12 +36,12 @@ public class LaserPositioner : MonoBehaviour
            
             
             
-                lr.SetPosition(i, points[i].position);
+                lr.SetPosition(i, points[i].localPosition);
             
         }
         if (!even)
         {
-            lr.SetPosition(length, points[0].position);
+            lr.SetPosition(length, points[0].localPosition);
         }
         
     }
