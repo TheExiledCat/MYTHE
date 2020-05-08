@@ -20,7 +20,7 @@ public class StationaryTrap : Trap
     }
     void OnDrawGizmos()
     {
-        Vector3 offset = transform.position;
-        Gizmos.DrawWireCube(center+offset, extents);
+        Gizmos.matrix = transform.localToWorldMatrix;
+        Gizmos.DrawWireCube(center, extents);
     }
 }
