@@ -38,7 +38,9 @@ public class CameraFollow : MonoBehaviour
 
         if (lookAtPlayer || rotateAround)
         {
+           
             transform.LookAt(target);
+            
         }
     }
 
