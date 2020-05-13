@@ -8,4 +8,5 @@ public class Constants
     public const string PLAYER_TAG = "Player";
     public const int PLAYER_MAX_HEALTH=1;
     public const float RESOURCE_MAX = 100;
+    public const int SELECTABLE_LAYER = 1 << 9;
 }
