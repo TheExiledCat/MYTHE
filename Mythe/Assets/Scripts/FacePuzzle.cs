@@ -4,43 +4,24 @@ using UnityEngine;
 
 public class FacePuzzle : MonoBehaviour
 {
-    public int faceOrder = 1;
-    private bool isHit = false;
+    public int faceOrder = 4;
+    public GameObject[] selectorArr;
 
-    private bool complete = false;
+    void Start()
+    {
+        selectorArr = new GameObject[faceOrder];
+
+        for (int i = 0; i < faceOrder; i++)
+        {
+
+        }
+    }
 
     void OnCollisionEnter(Collision col)
     {
-        isHit = true;
-
-        if (isHit && faceOrder == 1 && col.gameObject.tag == "Happy")
+        if (col.gameObject.tag == "Player")
         {
-            faceOrder++;
-            isHit = false;
+            Debug.Log("oof");
         }
-
-        else if (isHit && faceOrder == 2 && col.gameObject.tag == "Shocked")
-        {
-            faceOrder++;
-            isHit = false;
-        }
-
-        else if (isHit && faceOrder == 3 && col.gameObject.tag == "Sad")
-        {
-            faceOrder++;
-            isHit = false;
-        }
-
-        else if (isHit && faceOrder == 4 && col.gameObject.tag == "Angry")
-        {
-            complete = true;
-            isHit = false;
-        }
-
-        else
-        {
-            faceOrder = 1;
-        }
-        
     }
 }
