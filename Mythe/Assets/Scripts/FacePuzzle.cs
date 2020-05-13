@@ -4,10 +4,26 @@ using UnityEngine;
 
 public class FacePuzzle : MonoBehaviour
 {
+    public Gate gate;
+
     public int faceOrder = 1;
     private bool isHit = false;
 
     private bool complete = false;
+
+    void Update()
+    {
+        Completed();
+    }
+
+    void Completed()
+    {
+        if (complete)
+        {
+            gate.Open();
+            complete = false;
+        }
+    }
 
     void OnCollisionEnter(Collision col)
     {
