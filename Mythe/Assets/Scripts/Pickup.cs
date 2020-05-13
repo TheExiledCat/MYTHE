@@ -11,19 +11,21 @@ public class Pickup : MonoBehaviour
 
     public GameObject selected;
     float dist;
- 
-    bool frame=false;
+    [SerializeField]
+    LayerMask selectables;
+    bool frame = false;
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState=CursorLockMode.Locked;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit,maxRange,Constants.SELECTABLE_LAYER)){
-            if (hit.collider.GetComponent<Selectable>() != null&&Input.GetMouseButtonDown(0)&&selected==null)
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, maxRange, selectables))
+        {
+            if (hit.collider.GetComponent<Selectable>() != null && Input.GetMouseButtonDown(0) && selected == null)
             {
                 selected = hit.collider.gameObject;
                 dist = Vector3.Distance(Camera.main.transform.position, selected.transform.position);
@@ -33,22 +35,19 @@ public class Pickup : MonoBehaviour
         print(frame);
         if (selected != null)
         {
-            selected.GetComponent<Rigidbody>().freezeRotation = true;
-            selected.transform.eulerAngles = Vector3.zero;
-            selected.transform.position = Camera.main.transform.position+Camera.main.transform.forward*dist;
-            if (Input.GetMouseButtonDown(0)&&!frame)
+            selected.transform.position = Camera.main.transform.position + Camera.main.transform.forward * dist;
+            if (Input.GetMouseButtonDown(0) && !frame)
             {
-                selected.GetComponent<Rigidbody>().freezeRotation = false;
                 selected = null;
             }
             frame = false;
         }
-        
-            
-        
-        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward*maxRange, Color.red);
+
+
+
+        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * maxRange, Color.red);
         print(selected);
-        
+
     }
-    
+
 }

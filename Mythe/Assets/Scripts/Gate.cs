@@ -10,7 +10,7 @@ public class Gate : MonoBehaviour
     }
     IEnumerator MoveGate()
     {
-        for(int i = 0; i < 60; i++)
+        for (int i = 0; i < 60; i++)
         {
             transform.position += Vector3.down * (transform.localScale.y / 2);
             yield return new WaitForEndOfFrame();
