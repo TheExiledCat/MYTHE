@@ -107,9 +107,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344fafa145770924bbf9f0d36a2203a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blocks: []
-  cols: []
-  origin: {x: 0, y: 0, z: 0}
-  extents: {x: 0, y: 0, z: 0}
+  blocks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  origin: {x: 0, y: 13.9, z: 0}
+  extents: {x: 5.57, y: 27.33, z: 7.12}
   gate: {fileID: 0}
   p: {fileID: 0}
