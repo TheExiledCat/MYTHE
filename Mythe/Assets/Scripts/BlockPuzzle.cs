@@ -12,7 +12,7 @@ public class BlockPuzzle : MonoBehaviour
     Vector3 origin, extents;
     [SerializeField]
     Gate gate;
-    int numberOfBlocks=0;
+    int numberOfBlocks = 0;
     [SerializeField]
     Pickup p;
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class BlockPuzzle : MonoBehaviour
     {
         numberOfBlocks = 0;
         cols = Physics.OverlapBox(origin, extents, Quaternion.identity, Constants.SELECTABLE_LAYER);
-        foreach(GameObject g in blocks)
+        foreach (GameObject g in blocks)
         {
             if (ContainsBlock(g))
             {
@@ -28,16 +28,17 @@ public class BlockPuzzle : MonoBehaviour
 
             }
         }
-        if (numberOfBlocks == blocks.Length&&p.selected==null)
+        if (numberOfBlocks == blocks.Length && p.selected == null)
         {
             Finish();
             enabled = false;
         }
-        
+
     }
     void Finish()
     {
-        foreach(GameObject g in blocks) {
+        foreach (GameObject g in blocks)
+        {
             g.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
             g.GetComponent<Rigidbody>().freezeRotation = true;
             g.GetComponent<Selectable>().enabled = false;
@@ -51,17 +52,17 @@ public class BlockPuzzle : MonoBehaviour
     }
     bool ContainsBlock(GameObject b)
     {
-        
-       
-            for (int j = 0; j < cols.Length; j++)
+
+
+        for (int j = 0; j < cols.Length; j++)
+        {
+            if (cols[j].gameObject == b)
             {
-                if (cols[j].gameObject == b)
-                {
-                  
+
                 return true;
-                }
             }
-        
+        }
+
         return false;
     }
 }
