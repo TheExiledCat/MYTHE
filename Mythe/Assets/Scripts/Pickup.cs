@@ -23,7 +23,8 @@ public class Pickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, maxRange, selectables))
+        print(Camera.main);
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, maxRange, Constants.SELECTABLE_LAYER))
         {
             if (hit.collider.GetComponent<Selectable>() != null && Input.GetMouseButtonDown(0) && selected == null)
             {
