@@ -10,7 +10,7 @@ public class FacePuzzle : MonoBehaviour
     private bool isHit = false;
 
     private bool complete = false;
-
+    public LayerMask Totem;
     void Update()
     {
         Completed();
@@ -20,6 +20,7 @@ public class FacePuzzle : MonoBehaviour
     {
         if (complete)
         {
+            print("done");
             gate.Open();
             complete = false;
         }
@@ -27,36 +28,41 @@ public class FacePuzzle : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        isHit = true;
-
-        if (isHit && faceOrder == 1 && col.gameObject.tag == "Happy")
-        {
-            faceOrder++;
-            isHit = false;
-        }
-
-        else if (isHit && faceOrder == 2 && col.gameObject.tag == "Shocked")
-        {
-            faceOrder++;
-            isHit = false;
-        }
-
-        else if (isHit && faceOrder == 3 && col.gameObject.tag == "Sad")
-        {
-            faceOrder++;
-            isHit = false;
-        }
-
-        else if (isHit && faceOrder == 4 && col.gameObject.tag == "Angry")
-        {
-            complete = true;
-            isHit = false;
-        }
-
-        else
-        {
-            faceOrder = 1;
-        }
         
+        isHit = true;
+        if (col.gameObject.tag=="Happy"|| col.gameObject.tag == "Sad" || col.gameObject.tag == "Shocked" || col.gameObject.tag == "Angry")
+        {
+            Debug.Log(col.gameObject.tag);
+            if (isHit && faceOrder == 1 && col.gameObject.tag == "Happy")
+            {
+                faceOrder++;
+                isHit = false;
+            }
+
+            else if (isHit && faceOrder == 2 && col.gameObject.tag == "Shocked")
+            {
+                faceOrder++;
+                isHit = false;
+            }
+
+            else if (isHit && faceOrder == 3 && col.gameObject.tag == "Sad")
+            {
+                faceOrder++;
+                isHit = false;
+            }
+
+            else if (isHit && faceOrder == 4 && col.gameObject.tag == "Angry")
+            {
+                complete = true;
+                isHit = false;
+            }
+
+            else
+            {
+                faceOrder = 1;
+            }
+
+        }
+
     }
 }

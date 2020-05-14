@@ -10,11 +10,11 @@ public class CameraFollow : MonoBehaviour
 
 
     [Range(0.01f, 1.0f)]
-    public float smoothFactor = 0.5f;
+    public float smoothFactor;
 
-    public bool lookAtPlayer = false;
+    public bool lookAtPlayer;
 
-    public bool rotateAround = true;
+    public bool rotateAround;
     public float rotationSpeed = 5f;
 
 
