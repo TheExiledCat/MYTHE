@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 987
-  m_MinSize: {x: 881, y: 492}
-  m_MaxSize: {x: 16006, y: 14042}
+  m_MinSize: {x: 880, y: 492}
+  m_MaxSize: {x: 16005, y: 14042}
   vertical: 0
-  controlID: 159
+  controlID: 13060
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 1360
     height: 987
-  m_MinSize: {x: 605, y: 492}
-  m_MaxSize: {x: 12005, y: 14042}
+  m_MinSize: {x: 604, y: 492}
+  m_MaxSize: {x: 12004, y: 14042}
   vertical: 1
-  controlID: 137
+  controlID: 13061
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,10 +163,10 @@ MonoBehaviour:
     y: 0
     width: 1360
     height: 711
-  m_MinSize: {x: 605, y: 221}
-  m_MaxSize: {x: 12005, y: 4021}
+  m_MinSize: {x: 604, y: 221}
+  m_MaxSize: {x: 12004, y: 4021}
   vertical: 0
-  controlID: 138
+  controlID: 13062
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,8 +212,8 @@ MonoBehaviour:
     y: 0
     width: 446
     height: 711
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -239,8 +239,8 @@ MonoBehaviour:
     y: 0
     width: 508
     height: 711
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_MinSize: {x: 276, y: 192}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 160
+  controlID: 13196
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -316,8 +316,8 @@ MonoBehaviour:
     y: 0
     width: 560
     height: 470
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -390,7 +390,7 @@ MonoBehaviour:
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_MaximizeOnPlay: 1
+  m_MaximizeOnPlay: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
@@ -472,23 +472,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5e500000
-      m_LastClickedID: 20574
-      m_ExpandedIDs: b058ffff36adffffece8ffff42eaffffc44200000443000046430000be430000b04500003a4800005e500000
+      m_SelectedIDs: 6e62ffff
+      m_LastClickedID: -40338
+      m_ExpandedIDs: 0e5fffff825fffff6c62ffff6e62ffff8a63ffff1466ffff586bffff8074ffffaa87ffffe28fffff7e90ffffb690ffffb8b0ffffced2ffff04d4ffffb4d4ffffe6e8ffff2ef1ffff3a4000001c410000f242000006710000dc720000a8c0000020c1000080c10000c4c50000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: snakehead
+        m_OriginalName: snakehead
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -40340
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -534,9 +534,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.9731941, y: 1.8819714, z: -3.1235952}
+    m_Target: {x: -3.8279912, y: 1.419771, z: 2.7164266}
     speed: 2
-    m_Value: {x: 2.9731941, y: 1.8819714, z: -3.1235952}
+    m_Value: {x: -3.8279912, y: 1.419771, z: 2.7164266}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -582,13 +582,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.2948824, y: 0.40476155, z: -0.13972642, w: 0.8542189}
+    m_Target: {x: -0.02342295, y: 0.9660114, z: -0.23947321, w: -0.09448568}
     speed: 2
-    m_Value: {x: 0.29616323, y: 0.40455133, z: -0.14033334, w: 0.8537752}
+    m_Value: {x: -0.023422932, y: 0.9660106, z: -0.23947302, w: -0.094485596}
   m_Size:
-    m_Target: 5.6712103
+    m_Target: 1.4110491
     speed: 2
-    m_Value: 0.8660254
+    m_Value: 1.4110491
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -678,20 +678,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Models/assets/plafondtrap_models
+    - Assets/Objects/stone puzzle
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Models/assets/plafondtrap_models
+  - Assets/Objects/stone puzzle
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\projecten\Mythe\MYTHE\Mythe
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 5}
-    m_SelectedIDs: a03c0000
-    m_LastClickedID: 15520
-    m_ExpandedIDs: 00000000c43a00009e3b0000e83c0000a440000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 96480000
+    m_LastClickedID: 18582
+    m_ExpandedIDs: 000000008838000094390000f23a0000fe3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -719,7 +719,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c43a0000
+    m_ExpandedIDs: 000000008838000094390000f23a0000fe3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000c6560000aa2d0000263000003a38000016360100d8310000d04300008035000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -962,4 +962,4 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -28490
+  m_LastSelectedObjectID: -41172

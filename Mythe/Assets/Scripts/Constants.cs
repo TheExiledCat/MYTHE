@@ -9,4 +9,5 @@ public class Constants
     public const int PLAYER_MAX_HEALTH=1;
     public const float RESOURCE_MAX = 100;
     public const int SELECTABLE_LAYER = 1 << 9;
+    public const int TOTEM_LAYER = 1 << 10;
 }
