@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac6967097753b7545813124cc645fece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  center: {x: 0.29, y: 2.31, z: 0}
+  center: {x: -0.28, y: -2.2, z: 0}
   extents: {x: 3.58, y: 0.34, z: 3.34}
 --- !u!65 &2566379228971799599
 BoxCollider:
