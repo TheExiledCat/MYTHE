@@ -6,6 +6,7 @@ public class BlockPuzzle : MonoBehaviour
 {
     [SerializeField]
     GameObject[] blocks;
+    [SerializeField]
     Collider[] cols;
     // Start is called before the first frame update
     [SerializeField]
@@ -15,19 +16,22 @@ public class BlockPuzzle : MonoBehaviour
     int numberOfBlocks = 0;
     [SerializeField]
     Pickup p;
+
     // Update is called once per frame
     void Update()
     {
         numberOfBlocks = 0;
-        cols = Physics.OverlapBox(origin, extents, Quaternion.identity, Constants.SELECTABLE_LAYER);
+        cols = Physics.OverlapBox(transform.position, extents, Quaternion.identity,Constants.SELECTABLE_LAYER);
         foreach (GameObject g in blocks)
         {
+            print(ContainsBlock(g));
             if (ContainsBlock(g))
             {
                 numberOfBlocks++;
 
             }
         }
+        print(numberOfBlocks);
         if (numberOfBlocks == blocks.Length && p.selected == null)
         {
             Finish();
@@ -39,6 +43,7 @@ public class BlockPuzzle : MonoBehaviour
     {
         foreach (GameObject g in blocks)
         {
+            
             g.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
             g.GetComponent<Rigidbody>().freezeRotation = true;
             g.GetComponent<Selectable>().enabled = false;
@@ -47,8 +52,8 @@ public class BlockPuzzle : MonoBehaviour
     }
     void OnDrawGizmos()
     {
-        Gizmos.matrix = transform.localToWorldMatrix;
-        Gizmos.DrawWireCube(origin, extents);
+       // Gizmos.matrix = transform.localToWorldMatrix;
+        Gizmos.DrawWireCube(transform.position+origin, extents);
     }
     bool ContainsBlock(GameObject b)
     {
@@ -56,8 +61,9 @@ public class BlockPuzzle : MonoBehaviour
 
         for (int j = 0; j < cols.Length; j++)
         {
-            if (cols[j].gameObject == b)
+            if (cols[j] == b.GetComponent<BoxCollider>())
             {
+                print(b);
 
                 return true;
             }

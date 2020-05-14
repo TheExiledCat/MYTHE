@@ -32,7 +32,7 @@ public class Pickup : MonoBehaviour
                 frame = true;
             }
         }
-        print(frame);
+
         if (selected != null)
         {
             selected.transform.position = Camera.main.transform.position + Camera.main.transform.forward * dist;
@@ -46,7 +46,7 @@ public class Pickup : MonoBehaviour
 
 
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * maxRange, Color.red);
-        print(selected);
+
 
     }
 
