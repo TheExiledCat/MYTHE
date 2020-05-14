@@ -435,7 +435,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9628389012778583}
-  - component: {fileID: 6656900390535643589}
   m_Layer: 0
   m_Name: Spike Variant
   m_TagString: Untagged
@@ -466,20 +465,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 179.99998}
---- !u!114 &6656900390535643589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3925288538417617988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac6967097753b7545813124cc645fece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  center: {x: -0.28, y: -2.2, z: 0}
-  extents: {x: 2.97, y: 0.34, z: 2.72}
 --- !u!1 &4091126915753086783
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +476,9 @@ GameObject:
   - component: {fileID: 514942575860878714}
   - component: {fileID: 2162281179427856419}
   - component: {fileID: 2964838304815010048}
-  - component: {fileID: 2566379228971799599}
+  - component: {fileID: 760442252693146762}
+  - component: {fileID: 7827616187971084489}
+  - component: {fileID: 3862466778326804669}
   m_Layer: 0
   m_Name: polySurface41
   m_TagString: Untagged
@@ -560,8 +547,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2566379228971799599
+--- !u!65 &760442252693146762
 BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091126915753086783}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0589867, y: 0.35947466, z: 2.0839703}
+  m_Center: {x: 0.00000023841858, y: 0.000000059604645, z: 0}
+--- !u!64 &7827616187971084489
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -570,9 +570,22 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.6, y: 0.28757972, z: 1.47}
-  m_Center: {x: 0.00000023841858, y: 0.000000044703484, z: 0}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3906832884256009306, guid: 3fdc1b0f3399a02499bb8847cab4bbc9, type: 3}
+--- !u!114 &3862466778326804669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091126915753086783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26bea62ec066e4943852eb175717741f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4218579265893243440
 GameObject:
   m_ObjectHideFlags: 0
