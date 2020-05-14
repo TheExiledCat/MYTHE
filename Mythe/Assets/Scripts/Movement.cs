@@ -24,8 +24,8 @@ public class Movement : MonoBehaviour
         x = transform.right * Input.GetAxisRaw("Horizontal");
         z = transform.forward * Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.Space))
-            Jump();
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //    Jump();
     }
 
     void FixedUpdate()
@@ -35,7 +35,7 @@ public class Movement : MonoBehaviour
 
     void Movements()
     {
-        Vector3 movement = (x + z).normalized * playerSpeed;
+        Vector3 movement = (x + z*1.1f) * playerSpeed;
         snakehead.AddForce(movement);
     }
 
