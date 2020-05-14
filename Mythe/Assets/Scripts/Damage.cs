@@ -12,6 +12,6 @@ public class Damage : MonoBehaviour
     void Die()
     {
         print("DEAD");
-       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

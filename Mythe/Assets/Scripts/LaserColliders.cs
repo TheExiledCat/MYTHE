@@ -28,6 +28,7 @@ public class LaserColliders : Trap
             if (i == hitboxes.Count - 1)
             {
                 hitboxes[i] = Physics.OverlapCapsule(lp.points[i].position, lp.points[0].position, radius, Constants.PLAYER_LAYER);
+                
             }
             else
             {

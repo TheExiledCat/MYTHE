@@ -6,6 +6,7 @@ public class BlockPuzzle : MonoBehaviour
 {
     [SerializeField]
     GameObject[] blocks;
+    [SerializeField]
     Collider[] cols;
     // Start is called before the first frame update
     [SerializeField]
@@ -19,7 +20,7 @@ public class BlockPuzzle : MonoBehaviour
     void Update()
     {
         numberOfBlocks = 0;
-        cols = Physics.OverlapBox(origin, extents, Quaternion.identity, Constants.SELECTABLE_LAYER);
+        cols = Physics.OverlapBox(transform.position+origin, extents, Quaternion.identity, Constants.SELECTABLE_LAYER);
         foreach (GameObject g in blocks)
         {
             if (ContainsBlock(g))
@@ -47,8 +48,8 @@ public class BlockPuzzle : MonoBehaviour
     }
     void OnDrawGizmos()
     {
-        Gizmos.matrix = transform.localToWorldMatrix;
-        Gizmos.DrawWireCube(origin, extents);
+        
+        Gizmos.DrawWireCube(transform.position+origin, extents);
     }
     bool ContainsBlock(GameObject b)
     {

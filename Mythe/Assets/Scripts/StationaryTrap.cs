@@ -11,16 +11,17 @@ public class StationaryTrap : Trap
     
     void FixedUpdate()
     {
-        Collider[] col = Physics.OverlapBox(center, extents,transform.rotation,Constants.PLAYER_LAYER);
+        Collider[] col = Physics.OverlapBox(center+transform.position, extents,transform.rotation,Constants.PLAYER_LAYER);
         if (col.Length > 0)
         {
+            
             DamageCollider(col[0]);
         }
 
     }
     void OnDrawGizmos()
     {
-        Gizmos.matrix = transform.localToWorldMatrix;
-        Gizmos.DrawWireCube(center, extents);
+    
+        Gizmos.DrawWireCube(center+transform.position, extents);
     }
 }
