@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   center: {x: -0.28, y: -2.2, z: 0}
-  extents: {x: 3.58, y: 0.34, z: 3.34}
+  extents: {x: 2.97, y: 0.34, z: 2.72}
 --- !u!1 &4091126915753086783
 GameObject:
   m_ObjectHideFlags: 0
