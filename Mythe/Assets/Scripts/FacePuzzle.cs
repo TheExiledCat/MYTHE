@@ -16,6 +16,7 @@ public class FacePuzzle : MonoBehaviour
     public AudioSource Shocked;
     public AudioSource Sad;
     public AudioSource Angry;
+    public AudioSource Fail;
 
     void Update()
     {
@@ -70,6 +71,7 @@ public class FacePuzzle : MonoBehaviour
             else
             {
                 faceOrder = 1;
+                Fail.Play(0);
             }
 
         }

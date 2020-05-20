@@ -1588,6 +1588,7 @@ MonoBehaviour:
   Shocked: {fileID: 0}
   Sad: {fileID: 0}
   Angry: {fileID: 0}
+  Fail: {fileID: 0}
 --- !u!114 &1626721597056219468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1631,7 +1632,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4a94f20c1f8992d4cab563d937b44c57, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.32
   m_Pitch: 1
   Loop: 0
   Mute: 0
