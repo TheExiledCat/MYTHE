@@ -23,6 +23,8 @@ public class Pickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        dist += Input.GetAxis("Mouse ScrollWheel")*2;
         print(Camera.main);
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, maxRange, Constants.SELECTABLE_LAYER))
         {
