@@ -11,12 +11,6 @@ public class FacePuzzle : MonoBehaviour
 
     private bool complete = false;
     public LayerMask Totem;
-
-    public AudioSource Happy;
-    public AudioSource Shocked;
-    public AudioSource Sad;
-    public AudioSource Angry;
-
     void Update()
     {
         Completed();
@@ -42,28 +36,24 @@ public class FacePuzzle : MonoBehaviour
             if (isHit && faceOrder == 1 && col.gameObject.tag == "Happy")
             {
                 faceOrder++;
-                Happy.Play(0);
                 isHit = false;
             }
 
             else if (isHit && faceOrder == 2 && col.gameObject.tag == "Shocked")
             {
                 faceOrder++;
-                Shocked.Play(0);
                 isHit = false;
             }
 
             else if (isHit && faceOrder == 3 && col.gameObject.tag == "Sad")
             {
                 faceOrder++;
-                Sad.Play(0);
                 isHit = false;
             }
 
             else if (isHit && faceOrder == 4 && col.gameObject.tag == "Angry")
             {
                 complete = true;
-                Angry.Play(0);
                 isHit = false;
             }
 
