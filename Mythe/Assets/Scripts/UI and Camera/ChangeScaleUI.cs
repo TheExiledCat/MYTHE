@@ -19,9 +19,9 @@ public class ChangeScaleUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     void Update()
     {
         if(changeScale == true)
-            transform.localScale = Vector3.Lerp(transform.localScale, newScale, speed * Time.deltaTime);
+            transform.localScale = Vector3.Lerp(transform.localScale, newScale, speed * Time.unscaledDeltaTime);
         else
-            transform.localScale = Vector3.Lerp(transform.localScale, oldScale, speed * Time.deltaTime);
+            transform.localScale = Vector3.Lerp(transform.localScale, oldScale, speed * Time.unscaledDeltaTime);
 
     }
 

@@ -9,21 +9,29 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuUI;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            gameIsPaused = !gameIsPaused;
-            Debug.Log("P was pressed");
+            Resume();
         }
     }
 
-    void Resume()
+    public void Resume()
     {
-        //PauseMenuUI.SetActive(false);
-        //Time.timeScale = 1f;
+        gameIsPaused = !gameIsPaused;
+        Debug.Log("P was pressed");
+        if (gameIsPaused == true)
+        {
+            PauseMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else if (gameIsPaused == false)
+        {
+            PauseMenuUI.SetActive(false);
+            Time.timeScale = 1f;
+        }
     }
-    void Pause()
+    public void Exit()
     {
-        //PauseMenuUI.SetActive(true);
-        //Time.timeScale = 0f;
+        Application.Quit();
     }
 }
