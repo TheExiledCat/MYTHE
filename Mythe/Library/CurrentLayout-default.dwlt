@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 877, y: 492}
-  m_MaxSize: {x: 18003, y: 14042}
+  m_MinSize: {x: 881, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 65926
+  controlID: 21064
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 1088
     height: 731
-  m_MinSize: {x: 602, y: 492}
+  m_MinSize: {x: 605, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 65963
+  controlID: 20927
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,10 +163,10 @@ MonoBehaviour:
     y: 0
     width: 1088
     height: 460
-  m_MinSize: {x: 602, y: 221}
-  m_MaxSize: {x: 12002, y: 4021}
+  m_MinSize: {x: 605, y: 221}
+  m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 65964
+  controlID: 20928
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_MinSize: {x: 333, y: 271}
   m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 66023
+  controlID: 21019
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -470,10 +470,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 32}
-      m_SelectedIDs: 125afcff
-      m_LastClickedID: -239086
-      m_ExpandedIDs: 9c87fcffe6eaffff0ef5ffff24410000a64600004a47000096480000e4480000
+      scrollPos: {x: 0, y: 4304}
+      m_SelectedIDs: 86f6ffff
+      m_LastClickedID: -2426
+      m_ExpandedIDs: 62fbffff523f0000dc4400008045000016460000ca46000014470000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -533,9 +533,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.7801101, y: 2.4248602, z: -9.523581}
+    m_Target: {x: -0.7449063, y: 2.50365, z: 2.1726928}
     speed: 2
-    m_Value: {x: 3.7801101, y: 2.4248602, z: -9.523581}
+    m_Value: {x: -0.7449063, y: 2.50365, z: 2.1726928}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -581,13 +581,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.013972236, y: -0.31926757, z: 0.00461873, w: -0.9481233}
+    m_Target: {x: 0.00021249168, y: 0.9996962, z: -0.034507446, w: 0.010094681}
     speed: 2
-    m_Value: {x: -0.015378073, y: -0.32050803, z: 0.0051188697, w: -0.9471071}
+    m_Value: {x: 0.00021249168, y: 0.9996962, z: -0.034507446, w: 0.010094681}
   m_Size:
-    m_Target: 6.826667
+    m_Target: 4.377493
     speed: 2
-    m_Value: 7.148342
+    m_Value: 4.377493
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -677,20 +677,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials/textures/papier
+    - Assets/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials/textures/papier
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\DATA\3D\mythe game\MYTHE\Mythe
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 106}
-    m_SelectedIDs: 76ad0000
-    m_LastClickedID: 44406
-    m_ExpandedIDs: 00000000183700006238000076380000fe390000c43d000000ca9a3b
+    scrollPos: {x: 0, y: 110}
+    m_SelectedIDs: bc360000
+    m_LastClickedID: 14012
+    m_ExpandedIDs: 000000005e350000a836000040380000183d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -718,7 +718,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000183700006238000076380000fe390000c43d000000ca9a3b
+    m_ExpandedIDs: 000000005e350000a836000040380000183d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
