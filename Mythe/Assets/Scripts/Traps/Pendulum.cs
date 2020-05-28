@@ -9,9 +9,11 @@ public class Pendulum : MonoBehaviour
     public float timeLeft = 2f;
     public float resetTime = 2f;
     public bool turned = false;
+    public AudioSource audioData;
 
     void Start()
     {
+
         var hinge = GetComponent<HingeJoint>();
 
         var motor = hinge.motor;
@@ -30,7 +32,7 @@ public class Pendulum : MonoBehaviour
         timeLeft -= Time.deltaTime;
         if(timeLeft < 0)
         {
-            if (turned == true)
+          /*  if (turned == true)
             {
                 motor.targetVelocity = 200;
                 turned = false;
@@ -39,8 +41,13 @@ public class Pendulum : MonoBehaviour
             {
                 motor.targetVelocity = -200;
                 turned = true;
-            }
-            
+            }*/
+
+
+            motor.targetVelocity = turned ? 200 : -200;
+            turned = !turned;
+            audioData.Play(0);
+
             timeLeft = resetTime;
         }
         hinge.motor = motor;
