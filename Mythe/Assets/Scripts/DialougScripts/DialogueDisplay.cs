@@ -7,11 +7,11 @@ using TMPro;
 public class DialogueDisplay : MonoBehaviour
 {
     public TextMeshProUGUI txt;
-
+    public GameObject snakeUI;
     public void ShowDialogue(string text)
     {
         StopDialogue();
-        txt.gameObject.SetActive(true);
+        snakeUI.gameObject.SetActive(true);
         txt.text = text;
         Invoke("StopDialogue", 4f);
 
@@ -19,6 +19,7 @@ public class DialogueDisplay : MonoBehaviour
 
     void StopDialogue()
     {
-        txt.gameObject.SetActive(false);
+        snakeUI.gameObject.SetActive(false);
+
     }
 }
