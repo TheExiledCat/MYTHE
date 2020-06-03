@@ -10,6 +10,7 @@ public class DialogueTriggers : MonoBehaviour
     void Start()
     {
         dCycle = GameObject.FindGameObjectWithTag("Player").GetComponent<DialogueCycle>();
+        Debug.Log(dCycle.gameObject);
     }
 
     void OnTriggerEnter(Collider col)
@@ -18,6 +19,6 @@ public class DialogueTriggers : MonoBehaviour
         {
             dCycle.Cycle(key);
         }
-        print(col);
+        Debug.Log(col);
     }
 }

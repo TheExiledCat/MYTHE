@@ -11,6 +11,7 @@ public class DialogueDisplay : MonoBehaviour
     public float t;
     public void ShowDialogue(string text)
     {
+        Debug.Log("Showing dialogue");
         StopDialogue();
         snek.gameObject.SetActive(true);
         txt.text = text;
