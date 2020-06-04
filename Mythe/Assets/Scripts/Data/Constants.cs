@@ -10,4 +10,5 @@ public class Constants
     public const float RESOURCE_MAX = 100;
     public const int SELECTABLE_LAYER = 1 << 9;
     public const int TOTEM_LAYER = 1 << 10;
+    public const int WALL_LAYER = 1 << 12;
 }
