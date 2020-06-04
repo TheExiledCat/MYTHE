@@ -6,6 +6,7 @@ public class Pickup : MonoBehaviour
 {
     Ray ray;
     RaycastHit hit;
+
     [SerializeField]
     float maxRange;
 
@@ -46,11 +47,22 @@ public class Pickup : MonoBehaviour
             frame = false;
         }
 
-
+        CheckDistanceBoundaries();
 
         Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * maxRange, Color.red);
         print(selected);
 
+    }
+    void CheckDistanceBoundaries()
+    {
+        RaycastHit wall;
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward,out wall, maxRange*100, Constants.WALL_LAYER))
+        {
+            
+            if (dist >= wall.distance-1){
+                dist = wall.distance-1;
+            }
+        }
     }
 
 }

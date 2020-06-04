@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Final scenes/LevelBuilder.unity
+- path: Assets/Scenes/Block puzzle.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
