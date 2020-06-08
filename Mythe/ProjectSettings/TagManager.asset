@@ -5,10 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - TrapBox
-  - Happy
-  - Sad
-  - Angry
-  - Shocked
   layers:
   - Default
   - TransparentFX
