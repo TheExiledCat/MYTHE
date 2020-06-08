@@ -3,78 +3,79 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FacePuzzle : MonoBehaviour
-{
-    public Gate gate;
+{   
+    [SerializeField]
+    Gate gate;
 
-    public int faceOrder = 1;
-    private bool isHit = false;
-
-    private bool complete = false;
-    public LayerMask Totem;
-
-    public AudioSource Happy;
-    public AudioSource Shocked;
-    public AudioSource Sad;
-    public AudioSource Angry;
-    public AudioSource Fail;
-
-    void Update()
+    int index = 0;
+   
+    
+    private bool done = false;
+    
+    
+    [Header("Game Objects and Audio sources of Heads in order of happy to angry")]
+    [SerializeField]
+    GameObject[] heads = new GameObject[4];
+    AudioSource[] sources = new AudioSource[4];
+    [SerializeField] AudioClip failSound;
+    void Start()
     {
-        Completed();
-    }
-
-    void Completed()
-    {
-        if (complete)
+        for(int i = 0; i < heads.Length; i++)
         {
-            print("done");
-            gate.Open();
-            complete = false;
+            sources[i] = heads[i].transform.parent.GetComponent<AudioSource>();
         }
+        print(index);
+    }
+   
+   
+
+    void Complete()
+    {
+
+        print("Done");
+        done = true;
+        gate.Open();
+        
+        
     }
 
     void OnCollisionEnter(Collision col)
     {
+
+        int layer = Constants.TOTEM_LAYER >> col.gameObject.layer;
         
-        isHit = true;
-        if (col.gameObject.tag=="Happy"|| col.gameObject.tag == "Sad" || col.gameObject.tag == "Shocked" || col.gameObject.tag == "Angry")
+        if (layer==1 &&!done)
         {
-            Debug.Log(col.gameObject.tag);
-            if (isHit && faceOrder == 1 && col.gameObject.tag == "Happy")
+            print(col.gameObject);
+            if (col.gameObject == heads[index])
             {
-                faceOrder++;
-                Happy.Play(0);
-                isHit = false;
-            }
-
-            else if (isHit && faceOrder == 2 && col.gameObject.tag == "Shocked")
+                sources[index].Play();
+                NextTotem();
+            } else if ((index > 0 && col.gameObject != heads[index - 1]) || (index == 0 && col.gameObject != heads[index]))
             {
-                faceOrder++;
-                Shocked.Play(0);
-                isHit = false;
+                Restart();
             }
-
-            else if (isHit && faceOrder == 3 && col.gameObject.tag == "Sad")
-            {
-                faceOrder++;
-                Sad.Play(0);
-                isHit = false;
-            }
-
-            else if (isHit && faceOrder == 4 && col.gameObject.tag == "Angry")
-            {
-                complete = true;
-                Angry.Play(0);
-                isHit = false;
-            }
-
-            else
-            {
-                faceOrder = 1;
-                Fail.Play(0);
-            }
-
+            
         }
 
+    }
+    void Restart()
+    {
+        index = 0;
+        print("wrong");
+        sources[0].PlayOneShot(failSound);
+        print(index);
+    }
+    void NextTotem()
+    {
+        if (index < heads.Length-1)
+        {
+            index++;
+        }
+        else
+        {
+            Complete();
+        }
+        print(index);
     }
 }
