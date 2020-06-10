@@ -1583,7 +1583,6 @@ GameObject:
   - component: {fileID: 1626721597056219469}
   - component: {fileID: 1626721597056219468}
   - component: {fileID: 1626721597056219459}
-  - component: {fileID: 3834382601154409234}
   m_Layer: 11
   m_Name: head
   m_TagString: Player
@@ -1709,15 +1708,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gate: {fileID: 0}
-  faceOrder: 1
-  Totem:
-    serializedVersion: 2
-    m_Bits: 1024
-  Happy: {fileID: 0}
-  Shocked: {fileID: 0}
-  Sad: {fileID: 0}
-  Angry: {fileID: 0}
-  Fail: {fileID: 528804247}
+  heads:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  failSound: {fileID: 0}
 --- !u!114 &1626721597056219468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1749,20 +1745,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 40
   jumpForce: 10
---- !u!114 &3834382601154409234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7801028867723632591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2965c312b34dfdf4786ea8585330b3ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dDisplay: {fileID: 0}
-  currentText: 
 --- !u!82 &4792397571873715440
 AudioSource:
   m_ObjectHideFlags: 0

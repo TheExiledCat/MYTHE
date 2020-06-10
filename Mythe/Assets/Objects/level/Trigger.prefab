@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 209247251711159222}
-  - component: {fileID: 1995552246314119755}
   - component: {fileID: 6539603633832470641}
   - component: {fileID: 506478782698243214}
+  - component: {fileID: 2744904941999373742}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -33,19 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1995552246314119755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3493944852694161034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 992adb0585c724542a7d760d715eed6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  key: Tutorial
 --- !u!65 &6539603633832470641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75,3 +62,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2744904941999373742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3493944852694161034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0f7a0ce9a404f45894c204876a5505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TutorialImages: {fileID: 0}
+  Timer: 0
+  TutorialOn: 0
