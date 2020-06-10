@@ -43,9 +43,9 @@ public class CameraFollow : MonoBehaviour
         {
             transform.LookAt(target);
         }
-        UpdateMovement();
+        CheckForWalls();
     }
-    void UpdateMovement()
+    void CheckForWalls()
     {
         RaycastHit hit;
         Vector3 targetDir = transform.position - target.position;
