@@ -7,7 +7,7 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
 
     private Vector3 _camOffset;
-
+    private float maxDistance;
 
     [Range(0.01f, 1.0f)]
     public float smoothFactor;
@@ -20,11 +20,14 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
+
         _camOffset = transform.position - target.position;
+        maxDistance = Vector3.Distance(transform.position, target.position);
     }
 
     void FixedUpdate()
     {
+
         if (rotateAround)
         {
             Quaternion camTurnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotationSpeed, Vector3.up);
@@ -40,7 +43,18 @@ public class CameraFollow : MonoBehaviour
         {
             transform.LookAt(target);
         }
+        UpdateMovement();
     }
+    void UpdateMovement()
+    {
+        RaycastHit hit;
+        Vector3 targetDir = transform.position - target.position;
 
-    
+        if (Physics.Raycast(target.position, targetDir, out hit, maxDistance, Constants.WALL_LAYER))
+        {
+            transform.position = hit.point;
+        }
+        Debug.DrawLine(target.position, hit.point);
+    }
 }
+   
