@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Final scenes/StartScreen.unity
     guid: 87b4851457caac543ab0c7cb52a3d1a0
   - enabled: 1
+    path: Assets/Scenes/Final scenes/LevelSelect.unity
+    guid: 9a98d576b65c48047bd93b1f3ad2bc63
+  - enabled: 1
     path: Assets/Scenes/Final scenes/LevelBuilder.unity
     guid: 8b5ee9508512c5843b78ad35ff0ee46f
   - enabled: 1
+    path: Assets/Scenes/Final scenes/LevelBuilder2.unity
+    guid: 063360840d939034087cc1c7fbf041df
+  - enabled: 1
     path: Assets/Scenes/Final scenes/EndScreen.unity
-    guid: 750814e35c3bcd84181452a2345e6d8e
+    guid: 61680ad3825be054dbdd46d419b1c8de
   m_configObjects: {}
