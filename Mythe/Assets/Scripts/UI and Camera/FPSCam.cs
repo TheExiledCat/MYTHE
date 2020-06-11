@@ -5,6 +5,8 @@ using UnityEngine;
 public class FPSCam : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField]
+    GameObject pausemenuUI;
     void Start()
     {
 
@@ -14,7 +16,11 @@ public class FPSCam : MonoBehaviour
     void Update()
     {
         transform.Rotate(new Vector3((Input.GetAxis("Mouse Y") * -1), 0));
-        Cursor.lockState = CursorLockMode.Locked;
+        if (pausemenuUI.activeSelf == true)
+            Cursor.lockState = CursorLockMode.None;
+        else
+            Cursor.lockState = CursorLockMode.Locked;
+
 
     }
 }

@@ -7,6 +7,6 @@ public class StartMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("LevelBuilder");
+        SceneManager.LoadScene("LevelSelect");
     }
 }

@@ -6,7 +6,6 @@ public class BlockPuzzle : MonoBehaviour
 {
     [SerializeField]
     GameObject[] blocks;
-    Rigidbody[] blockBodies;
     [SerializeField]
     Collider[] cols;
     // Start is called before the first frame update
@@ -15,19 +14,8 @@ public class BlockPuzzle : MonoBehaviour
     [SerializeField]
     Gate gate;
     int numberOfBlocks = 0;
-    
+    [SerializeField]
     Pickup p;
-    void Start()
-    {
-        p = GameObject.FindGameObjectWithTag("Player").GetComponent<Pickup>();
-        blockBodies = new Rigidbody[blocks.Length];
-        int i = 0;
-        foreach (GameObject g in blocks)
-        {
-            blockBodies[i] = g.GetComponent<Rigidbody>();
-            i++;
-        }
-    }
     // Update is called once per frame
     void Update()
     {
@@ -50,11 +38,11 @@ public class BlockPuzzle : MonoBehaviour
     }
     void Finish()
     {
-        foreach (Rigidbody r in blockBodies)
+        foreach (GameObject g in blocks)
         {
-           r.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
-           r.freezeRotation = true;
-            r.isKinematic = true;
+            g.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+            g.GetComponent<Rigidbody>().freezeRotation = true;
+            g.GetComponent<Selectable>().enabled = false;
         }
         gate.Open();
     }
