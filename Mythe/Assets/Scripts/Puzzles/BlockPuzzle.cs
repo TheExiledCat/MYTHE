@@ -15,10 +15,11 @@ public class BlockPuzzle : MonoBehaviour
     [SerializeField]
     Gate gate;
     int numberOfBlocks = 0;
-    [SerializeField]
+    
     Pickup p;
     void Start()
     {
+        p = GameObject.FindGameObjectWithTag("Player").GetComponent<Pickup>();
         blockBodies = new Rigidbody[blocks.Length];
         int i = 0;
         foreach (GameObject g in blocks)
